@@ -8,15 +8,12 @@ Conforme avanço nos meus estudos sobre os fundamentos de **Programação Orient
 
 Este projeto em Java simula a gestão acadêmica de uma turma, permitindo o cadastro dinâmico de múltiplos alunos, cálculo de médias individuais, verificação do status de aprovação, além de gerar estatísticas consolidadas da turma (como a média geral e o destaque de maior nota).
 
----
-
 ## Demonstração de Uso
 
 Veja o sistema rodando e interagindo com o usuário diretamente no terminal:
 
 > 🎥 **Vídeo da demonstração:** [Assista ao arquivo `demo.mp4`](img/demo.mp4)
 
----
 
 ## Diagrama da Classe Aluno
 
@@ -24,7 +21,6 @@ A estrutura abaixo representa a modelagem da classe `Aluno` desenvolvida no paco
 
 ![Diagrama de Classe do Aluno](img/diagram_class_aluno.png)
 
----
 
 ## Conceitos de POO Aplicados
 
@@ -42,15 +38,12 @@ Neste projeto, estou aplicando na prática o conhecimento que aprendi recentemen
 * **Sobrescrita de Métodos (`@Override`):** Customização do método `toString()` para entregar uma representação em texto limpa e formatada do aluno com seu status final.
 * **Organização em Pacotes:** Separação clara de responsabilidades entre as classes do domínio (`entities`) e a classe de ponto de entrada/interação (`application`).
 
----
 
 ## Próximos Passos
 
 Como este repositório reflete minha exata jornada de aprendizado atual, **ainda não implementei validações de dados ou tratamento de exceções (Exceptions)** — portanto, o programa confia que o usuário inserirá os tipos de dados corretos no terminal. 
 
 Assim que eu avançar nos estudos e dominar as tratativas de exceções em Java, retornarei a este repositório com novas atualizações para tornar a aplicação totalmente robusta e à prova de falhas.
-
----
 
 ## Estrutura do Projeto
 
