@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 import entities.Aluno;
@@ -14,7 +16,7 @@ public class Program {
         int n = sc.nextInt();
         sc.nextLine(); 
 
-        Aluno[] vect = new Aluno[n];
+        List<Aluno> alunos = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
             System.out.printf("\nDados do %dº aluno:\n", i + 1);
@@ -28,26 +30,26 @@ public class Program {
             double nota2 = sc.nextDouble();
             sc.nextLine(); 
 
-            vect[i] = new Aluno(nome, nota1, nota2);
+            alunos.add(new Aluno(nome, nota1, nota2));
         }
 
         System.out.println("\n=== RELATORIO DA TURMA ===");
-        for (int i = 0; i < n; i++) {
-            System.out.println(vect[i]);
+        for (Aluno aluno : alunos) {
+            System.out.println(aluno);
         }
 
         double somaMedias = 0.0;
-        Aluno melhorAluno = vect[0];
+        Aluno melhorAluno = alunos.get(0);
 
-        for (int i = 0; i < n; i++) {
-            somaMedias += vect[i].calcularMedia();
+        for (Aluno aluno : alunos) {
+            somaMedias += aluno.calcularMedia();
 
-            if (vect[i].calcularMedia() > melhorAluno.calcularMedia()) {
-                melhorAluno = vect[i];
+            if (aluno.calcularMedia() > melhorAluno.calcularMedia()) {
+                melhorAluno = aluno;
             }
         }
 
-        double mediaGeral = somaMedias / n;
+        double mediaGeral = somaMedias / alunos.size();
 
         System.out.println();
         System.out.printf("Média geral da turma: %.2f\n", mediaGeral);
